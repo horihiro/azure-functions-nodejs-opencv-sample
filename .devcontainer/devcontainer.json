@@ -1,0 +1,31 @@
+// For format details, see https://aka.ms/vscode-remote/devcontainer.json or this file's README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.117.1/containers/azure-functions-dotnetcore-3.1
+{
+	"name": "Azure Functions & OpenCV for node.js",
+
+	// https://github.com/horihiro/azure-functions-nodejs-opencv-devcontainer/blob/master/Dockerfile
+	"image": "horihiro/azure-functions-nodejs-opencv-devcontainer:3.0-node12-opencv4nodejs5.6.0",
+	"forwardPorts": [ 7071 ],
+
+	// Set *default* container specific settings.json values on container create.
+	"settings": {
+		"terminal.integrated.shell.linux": "/bin/bash",
+		"codetour.showMarkers": false
+	},
+
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+		"vsls-contrib.codetour",
+		"ms-azuretools.vscode-azurefunctions"
+	],
+
+	"workspaceMount": "source=${localWorkspaceFolder},target=/home/site/wwwroot,type=bind,consistency=cached",
+	"workspaceFolder": "/home/site/wwwroot",
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postAttachCommand": "if [ $(npm ls --depth=0 2>&1 | grep 'missing: opencv4nodejs' | wc -l ) -eq 1 ]; then tar -xzf /tmp/node_modules.tar.gz & echo Extracting preinstalled opencv4nodejs from /tmp/node_modules.tar.gz... \\(this might take a few minutes\\) && wait && echo done; fi",
+
+	// Uncomment to connect as a non-root user. See https://aka.ms/vscode-remote/containers/non-root.
+	// "remoteUser": "vscode"
+
+}
