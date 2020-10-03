@@ -1,6 +1,6 @@
 # azure-functions-nodejs-opencv-sample
 
-This is **unofficial** sample project of Azure Functions for node.js with OpenCV([opencv4nodejs](https://www.npmjs.com/package/opencv4nodejs)) and made from [azure-functions-nodejs-opencv-template](https://github.com/horihiro/azure-functions-nodejs-opencv-template).
+This is **unofficial** sample project of Azure Functions for node.js with OpenCV([opencv4nodejs](https://www.npmjs.com/package/opencv4nodejs)) and made from [azure-functions-nodejs-opencv-template](https://github.com/horihiro/azure-functions-nodejs-opencv-template) with [Dev Container](https://github.com/horihiro/azure-functions-nodejs-opencv-devcontainer).
 
 # How to try
 
