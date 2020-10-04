@@ -15,3 +15,5 @@ This is **unofficial** sample project of Azure Functions for node.js with OpenCV
     ```
     https://<YOUR_FUNCTIONAPP_NAME>.azurewebsites.net/api/grayscalie?image_url=<IMAGE_URL>
     ```
+    if `image_url` is not specified, the function converts a following image to grayscale.<br>
+    ![](https://user-images.githubusercontent.com/4566555/66614178-ed7d1c80-ec02-11e9-8b22-4560309db118.png)
