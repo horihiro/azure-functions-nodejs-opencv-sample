@@ -12,7 +12,7 @@
   "author": "",
   "dependencies": {
     "mime-types": "^2.1.27",
-    "node-fetch": "^2.6.1",
+    "node-fetch": "^2.6.7",
     "opencv4nodejs": "^5.6.0"
   },
   "license": "MIT"
